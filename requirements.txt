@@ -1,0 +1,7 @@
+# Hermes P2P — libp2p-based mesh messenger
+
+libp2p>=0.6.0
+pynacl>=1.5.0
+cryptography
+multiaddr
+protobuf

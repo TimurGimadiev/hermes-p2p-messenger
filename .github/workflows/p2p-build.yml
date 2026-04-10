@@ -53,11 +53,5 @@ jobs:
 
       - name: Run integration tests
         run: |
-          # Test that imports work
-          python -c "
-from hermes_p2p.identity import Identity
-from hermes_p2p.message import HermesMessage
-from hermes_p2p.node import HermesNode
-print('All modules import OK')
-"
+          python3 -c 'from hermes_p2p.identity import Identity; from hermes_p2p.message import HermesMessage; from hermes_p2p.node import HermesNode; print("All modules import OK")'
           echo "Module import check passed"

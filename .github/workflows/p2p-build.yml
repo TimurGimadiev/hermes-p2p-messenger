@@ -51,9 +51,6 @@ jobs:
           pip install -r requirements.txt
           pip install pytest pytest-asyncio
 
-      - name: Run integration tests
+      - name: Run AST structural tests
         run: |
-          # Syntax check for all Python modules
-          python3 -m py_compile hermes_p2p/crypto.py hermes_p2p/identity.py hermes_p2p/message.py hermes_p2p/node.py cli.py
-          echo "Syntax check passed"
-          echo "Module import check passed"
+          python3 -m pytest tests/test_structure.py -v --tb=short

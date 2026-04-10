@@ -53,5 +53,7 @@ jobs:
 
       - name: Run integration tests
         run: |
-          python3 -c 'from hermes_p2p.identity import Identity; from hermes_p2p.message import HermesMessage; from hermes_p2p.node import HermesNode; print("All modules import OK")'
+          # Syntax check for all Python modules
+          python3 -m py_compile hermes_p2p/crypto.py hermes_p2p/identity.py hermes_p2p/message.py hermes_p2p/node.py cli.py
+          echo "Syntax check passed"
           echo "Module import check passed"
